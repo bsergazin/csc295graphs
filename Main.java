@@ -31,5 +31,22 @@ public class Main {
         matrixGraph.print();
 
         System.out.println(matrixGraph.checkEdge(0, 4));
+
+
+        ListGraph<Character> listGraph = new ListGraph<Character>(10, false);
+
+        listGraph.addEdge(0, 1);
+        listGraph.addEdge(0, 2);
+        listGraph.addEdge(1, 2);
+        listGraph.addEdge(1, 3);
+        listGraph.addEdge(2, 4);
+        listGraph.addEdge(3, 4);
+        listGraph.addEdge(4, 5);
+        listGraph.addEdge(5, 6);
+        listGraph.addEdge(7, 9);
+        listGraph.addEdge(8, 9);
+
+        listGraph.print();
+
     }
 }

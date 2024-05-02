@@ -15,8 +15,19 @@ public class ListGraph<T> {
     }
 
     public void addEdge(int src, int dest) {
-
+        list.get(src).add(dest);
+        if (!isDirected) {
+            list.get(dest).add(src);
+        }
     }
 
-    
+    public void print() {
+        for(var key : list.keySet()) {
+            System.out.print("Vertex " + key + ": ");
+            for(var edge : list.get(key)) {
+                System.out.print(edge + " ");
+            }
+            System.out.println();
+        }
+    }
 }
